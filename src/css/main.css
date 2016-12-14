@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+body{
+	
+}
+.container{
+	/*width:90%;*/
+	
+	margin:auto;
+}
+.header{
+	background-color: #c4ebf0;
+	height:80px;
+	text-align: center;
+}
+.left-nav{
+	width: 260px;
+	height:500px;
+	background-color: #dcdcdc;
+	float: left;
+}
+.center-container{
+	height: 500px;
+}
+.footer{
+	float: none;
+}
+.widget{
+	margin:20px;
+	background-color: #96a784;
+	float:left;
+}
+.menu ul{
+	list-style: none;
+	margin-left: -15%;
+}
+.menu li{
+	background-color: #76aa76;
+	border-top: solid 1px;
+	cursor: pointer;
+}
+.overlay{
+	
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	opacity: .5;
+}
+.modal-content{
+	z-index: 100;
+	color: red;
+	background-color:#fec5e6;
+	position: absolute;
+	width:350px;
+	height:300px;
+	top: 20%;
+	left: 40%;
+	-webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.3s;
+    animation-name: animatetop;
+    animation-duration: 0.3s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
