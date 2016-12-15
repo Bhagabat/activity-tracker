@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from '../common/Modal';
 import styles from '../css/main.css';
 export default class Menu extends React.Component{
 	constructor(props,context){
@@ -14,17 +15,24 @@ export default class Menu extends React.Component{
 		this.setState(state);
 	}
 	handlePopups(){
-		
 		if(this.state.logAct){
-			return(<div>
-					<div className={styles.overlay} onClick={()=>this.hidePopup('logAct')}></div>
-					<div className={styles['modal-content']} >Activity</div>
-			</div>);
+			return(<Modal onClose={()=>this.hidePopup('logAct')} title="Activity Log">
+				<table className={styles.formTable}>
+					<tbody>
+						<tr>
+							<td>Type:</td>
+							<td><input type="text"/></td>
+						</tr>
+						<tr>
+							<td>Description:</td>
+							<td><input type="textarea"/></td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</Modal>);
 		}else if(this.state.scheduleEvent){
-			return(<div>
-				<div className={styles.overlay} onClick={()=>this.hidePopup('scheduleEvent')}></div>
-				<div className={styles['modal-content']} >Activity</div>
-			</div>);
+			return(<Modal onClose={()=>this.hidePopup('scheduleEvent')} title="Event Scheduler"></Modal>);
 		}
 		
 	}

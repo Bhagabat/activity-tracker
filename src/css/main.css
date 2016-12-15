@@ -49,8 +49,7 @@ body{
 }
 .modal-content{
 	z-index: 100;
-	color: red;
-	background-color:#fec5e6;
+	background-color:#f0fdfb;
 	position: absolute;
 	width:350px;
 	height:300px;
@@ -59,7 +58,16 @@ body{
 	-webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.3s;
     animation-name: animatetop;
-    animation-duration: 0.3s
+    animation-duration: 0.3s;
+    border: solid 1px #979ca1;
+    -webkit-box-shadow: 10px 13px 5px -3px rgba(0,0,0,0.43);
+	-moz-box-shadow: 10px 13px 5px -3px rgba(0,0,0,0.43);
+	box-shadow: 10px 13px 5px -3px rgba(0,0,0,0.43);
+}
+.modal-title{
+	height:20px;
+	background-color: #56c8ff;
+	color:#fff;
 }
 
 @-webkit-keyframes animatetop {
@@ -71,3 +79,7 @@ body{
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
+.formTable td{
+	padding: 5px;
+}
+
